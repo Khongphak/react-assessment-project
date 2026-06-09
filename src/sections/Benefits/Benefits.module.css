@@ -1,0 +1,13 @@
+.section {
+  padding: 60px 24px;
+  border-top: 1px solid var(--border);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
