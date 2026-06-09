@@ -9,8 +9,8 @@
 .topbarInner {
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 24px;
-  height: 56px;
+  padding: 0 var(--space-5);
+  height: 3.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -18,15 +18,15 @@
 
 .topbarBrand {
   font-weight: 600;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: var(--text-h);
   text-decoration: none;
 }
 
 .topbarNav {
   display: flex;
-  gap: 24px;
-  font-size: 15px;
+  gap: var(--space-5);
+  font-size: 0.9375rem;
 }
 
 .topbarNav a {

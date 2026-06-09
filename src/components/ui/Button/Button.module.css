@@ -1,9 +1,9 @@
 .button {
   display: inline-block;
-  padding: 14px 32px;
-  border-radius: 8px;
+  padding: 0.875rem var(--space-6);
+  border-radius: var(--radius-md);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem;
   border: none;
   cursor: pointer;
   text-decoration: none;
