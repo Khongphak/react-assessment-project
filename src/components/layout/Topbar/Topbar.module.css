@@ -1,0 +1,40 @@
+.topbar {
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.topbarInner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topbarBrand {
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--text-h);
+  text-decoration: none;
+}
+
+.topbarNav {
+  display: flex;
+  gap: 24px;
+  font-size: 15px;
+}
+
+.topbarNav a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.topbarNav a:hover {
+  color: var(--accent);
+}
