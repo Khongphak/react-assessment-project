@@ -2,12 +2,13 @@
   display: inline-block;
   padding: 0.875rem var(--space-6);
   border-radius: var(--radius-md);
-  font-weight: 600;
+  font-weight: 400;
   font-size: 1rem;
   border: none;
   cursor: pointer;
   text-decoration: none;
   transition: opacity 0.2s;
+  font-family: var(--sans);
 }
 
 .button:hover {
@@ -15,12 +16,18 @@
 }
 
 .primary {
-  background: var(--accent);
+  background: var(--success-color);
   color: #fff;
 }
 
-.secondary {
+/* .secondary {
   background: transparent;
   color: var(--accent);
   border: 1px solid var(--accent-border);
+} */
+
+.secondary {
+  background: transparent;
+  color: var(--text-color-1);
+  border: 1px solid var(--error-color);
 }

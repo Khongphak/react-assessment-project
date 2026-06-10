@@ -2,13 +2,19 @@ import type { ButtonHTMLAttributes } from "react";
 import styles from "./Button.module.css";
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "outline";
 };
 
-export default function Button({ variant = "primary", className, ...props }: ButtonProps) {
+export default function Button({
+  variant = "primary",
+  className,
+  ...props
+}: ButtonProps) {
   return (
     <button
-      className={[styles.button, styles[variant], className].filter(Boolean).join(" ")}
+      className={[styles.button, styles[variant], className]
+        .filter(Boolean)
+        .join(" ")}
       {...props}
     />
   );
