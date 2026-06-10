@@ -1,16 +1,31 @@
 .topbar {
-  border-bottom: 1px solid var(--border);
-  background: var(--bg);
+  border-bottom: 0.0625rem solid var(--border);
+  background: var(--bg-color-1);
   position: sticky;
   top: 0;
   z-index: 50;
 }
 
+.logoMessage {
+  font-family: Open Sans;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 0.625rem;
+  line-height: 0.625rem;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #a8a8a8;
+}
+
+.topbarLogo {
+  padding-top: 0.75rem;
+}
+
 .topbarInner {
-  max-width: 900px;
+  max-width: 56.25rem;
   margin: 0 auto;
   padding: 0 var(--space-5);
-  height: 3.5rem;
+  height: 8.25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -26,15 +41,96 @@
 .topbarNav {
   display: flex;
   gap: var(--space-5);
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
 }
 
 .topbarNav a {
-  color: var(--text);
+  color: var(--text-color-2);
   text-decoration: none;
   transition: color 0.2s;
 }
 
 .topbarNav a:hover {
-  color: var(--accent);
+  color: var(--text-color-1);
+  font-weight: 400;
+}
+
+.topbarInfoLinks {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.25rem;
+  font-size: 0.875rem;
+}
+
+.topbarInfoLinks a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.topbarInfoLinks a:visited {
+  color: #fff;
+}
+
+.topbarRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0.625rem;
+}
+
+.topbarBottom {
+  display: flex;
+  gap: 1.875rem;
+  align-items: center;
+}
+
+.downloadApp {
+  display: flex;
+  align-items: center;
+  border: 0.0625rem solid var(--text-color-2);
+  border-radius: 0.25rem;
+  padding: 0.3125rem 0.625rem;
+}
+
+.mobileIcon {
+  width: 0.60625rem;
+  height: 1.154375rem;
+  margin-right: 0.3125rem;
+}
+
+.divider {
+  width: 0.0625rem;
+  height: 1rem;
+  background-color: #414141;
+}
+
+.flagIcon {
+  width: 1.0625rem;
+  height: 1.0625rem;
+  margin-right: 0.3125rem;
+}
+
+.topbarActions {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.loginButton {
+  width: 5.063rem;
+  height: 2.188rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.registerButton {
+  width: 6.9385rem;
+  height: 2.188rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
