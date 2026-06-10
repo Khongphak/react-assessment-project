@@ -1,0 +1,45 @@
+.wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+}
+
+.th {
+  padding: var(--space-3) var(--space-5);
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--text);
+  border-bottom: 2px solid var(--border);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.th:last-child {
+  text-align: right;
+}
+
+.tr:nth-child(even) {
+  background: var(--accent-bg);
+}
+
+.tr:hover {
+  background: var(--accent-bg);
+}
+
+.td {
+  padding: var(--space-3) var(--space-5);
+  color: var(--text-h);
+  border-bottom: 1px solid var(--border);
+}
+
+.td:last-child {
+  text-align: right;
+  font-weight: 600;
+  color: var(--accent);
+}
