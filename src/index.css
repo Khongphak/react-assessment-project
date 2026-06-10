@@ -1,36 +1,44 @@
 :root {
   /* Colors */
+
   --text: #6b6375;
   --text-h: #08060d;
+  --text-color-1: #ffffff;
+  --text-color-2: #eeeeee;
+
   --bg: #fff;
+  --bg-color-1: #161616;
   --border: #e5e4e7;
   --code-bg: #f4f3ec;
   --accent: #aa3bff;
   --accent-bg: rgba(170, 59, 255, 0.1);
   --accent-border: rgba(170, 59, 255, 0.5);
   --social-bg: rgba(244, 243, 236, 0.5);
+  --success-color: #159149;
+  --error-color: #912131;
+
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
   /* Font stacks */
-  --sans: 'Open Sans', system-ui, sans-serif;
-  --heading: 'Sofia Sans Condensed', system-ui, sans-serif;
+  --sans: "Open Sans", system-ui, sans-serif;
+  --heading: "Sofia Sans Condensed", system-ui, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
   /* Spacing (1rem = 16px) */
-  --space-1: 0.25rem;  /* 4px */
-  --space-2: 0.5rem;   /* 8px */
-  --space-3: 0.75rem;  /* 12px */
-  --space-4: 1rem;     /* 16px */
-  --space-5: 1.5rem;   /* 24px */
-  --space-6: 2rem;     /* 32px */
-  --space-7: 4rem;     /* 64px */
-  --space-8: 5rem;     /* 80px */
+  --space-1: 0.25rem; /* 4px */
+  --space-2: 0.5rem; /* 8px */
+  --space-3: 0.75rem; /* 12px */
+  --space-4: 1rem; /* 16px */
+  --space-5: 1.5rem; /* 24px */
+  --space-6: 2rem; /* 32px */
+  --space-7: 4rem; /* 64px */
+  --space-8: 5rem; /* 80px */
 
   /* Border radius */
-  --radius-sm: 0.25rem;  /* 4px */
-  --radius-md: 0.5rem;   /* 8px */
-  --radius-lg: 1rem;     /* 16px */
+  --radius-sm: 0.25rem; /* 4px */
+  --radius-md: 0.5rem; /* 8px */
+  --radius-lg: 1rem; /* 16px */
   --radius-full: 9999px;
 
   font-size: 16px; /* base: 1rem = 16px */
