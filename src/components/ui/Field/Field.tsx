@@ -7,12 +7,9 @@ type FieldProps = InputHTMLAttributes<HTMLInputElement> & {
 };
 
 const Field = forwardRef<HTMLInputElement, FieldProps>(
-  ({ label, error, id, ...props }, ref) => {
+  ({ error, id, ...props }, ref) => {
     return (
       <div className={styles.field}>
-        <label htmlFor={id} className={styles.label}>
-          {label}
-        </label>
         <input
           id={id}
           ref={ref}
@@ -29,7 +26,7 @@ const Field = forwardRef<HTMLInputElement, FieldProps>(
         )}
       </div>
     );
-  }
+  },
 );
 
 Field.displayName = "Field";
