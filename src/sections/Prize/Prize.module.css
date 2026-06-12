@@ -1,0 +1,56 @@
+.section {
+  padding: var(--space-7) var(--space-5);
+}
+.title {
+  font-weight: 400;
+  font-size: 3.125rem;
+  line-height: 3.125rem;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9.75rem, 1fr));
+  gap: 3rem;
+  max-width: 75rem;
+  margin: 4.5rem auto 0 auto;
+  text-align: center;
+}
+
+.itemContainer {
+  background-color: #f4f4f4;
+  width: 22rem;
+  height: 22rem;
+  border-radius: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.priceText {
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 3.125rem;
+  line-height: 2.5rem;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: lowercase;
+}
+
+.descText {
+  font-family: Open Sans;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.medalStyle {
+  max-width: 6.25rem;
+}
