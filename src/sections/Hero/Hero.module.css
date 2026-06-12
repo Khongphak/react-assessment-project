@@ -93,3 +93,16 @@
     flex-direction: column;
   }
 }
+
+.submitButtonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submitButton {
+  width: 19rem;
+  height: 3.3.375rem;
+  padding: 1rem;
+}

@@ -1,3 +1,5 @@
+import { useState } from "react";
+import JoinNowButton from "../../components/ui/JoinNowButton";
 import styles from "./Prize.module.css";
 
 const items = [
@@ -19,6 +21,13 @@ const items = [
 ];
 
 export default function Prize() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleClick = () => {
+    setIsSubmitting(true);
+    setTimeout(() => setIsSubmitting(false), 2000);
+  };
+
   return (
     <section className={styles.section}>
       <h1 className={styles.title}>Prizes</h1>
@@ -35,6 +44,13 @@ export default function Prize() {
           </div>
         ))}
       </div>
+      <JoinNowButton
+        className={styles.joinButton}
+        isShow={true}
+        isSubmitting={isSubmitting}
+        onClick={handleClick}
+        type="button"
+      />
     </section>
   );
 }

@@ -54,3 +54,9 @@
 .medalStyle {
   max-width: 6.25rem;
 }
+
+.joinButton {
+  margin-top: 1.5rem;
+  width: 18.75rem;
+  height: 3.375rem;
+}

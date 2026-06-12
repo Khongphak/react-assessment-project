@@ -2,7 +2,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
-import Button from "../../components/ui/Button";
+import JoinNowButton from "../../components/ui/JoinNowButton";
 import Field from "../../components/ui/Field";
 import styles from "./Hero.module.css";
 
@@ -104,14 +104,12 @@ export default function Hero() {
             />
           </div>
 
-          <Button
-            variant="primary"
-            className={styles.registerButton}
-            type="submit"
-            disabled={isSubmitting}
-          >
-            {isSubmitting ? " Joining..." : " Join Now"}
-          </Button>
+          <div className={styles.submitButtonContainer}>
+            <JoinNowButton
+              className={styles.submitButton}
+              isSubmitting={isSubmitting}
+            ></JoinNowButton>
+          </div>
         </form>
       </div>
     </section>
