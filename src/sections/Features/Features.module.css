@@ -1,0 +1,36 @@
+.featuresContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 2rem 0rem 2rem;
+}
+
+.featuresHeader {
+  font-weight: 400;
+  font-size: 3.125rem;
+  line-height: 3.125rem;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.featuresContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.boxContainer {
+  max-width: 15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4.75rem;
+  text-align: left;
+  margin-bottom: 3.75rem;
+}
+
+.mobilePhoneImageStyle {
+  margin: 2rem 1.25rem 0rem 1.25rem;
+  max-width: 35.25rem;
+}

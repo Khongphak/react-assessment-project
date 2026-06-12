@@ -4,6 +4,7 @@ import Topbar from "./components/layout/Topbar";
 import Benefits from "./sections/Benefits";
 import CTA from "./sections/CTA";
 import FAQ from "./sections/FAQ";
+import Features from "./sections/Features";
 import Hero from "./sections/Hero";
 import LeaderboardTable, { mockLeaderboardData } from "./sections/Leaderboard";
 
@@ -13,6 +14,7 @@ function App() {
       <Topbar />
       <main className={styles.main}>
         <Hero />
+        <Features />
         <Benefits />
         <CTA />
         <LeaderboardTable data={mockLeaderboardData} />
