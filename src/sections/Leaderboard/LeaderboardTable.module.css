@@ -29,6 +29,15 @@
   width: 100%;
   border-collapse: collapse;
   font-size: 0.9375rem;
+  table-layout: fixed;
+}
+
+.th:first-child {
+  width: 66.67%;
+}
+
+.th:last-child {
+  width: 33.33%;
 }
 
 .th {
@@ -36,34 +45,35 @@
   text-align: left;
   font-weight: 600;
   font-size: 0.875rem;
-  color: var(--text);
-  border-bottom: 2px solid var(--border);
+  color: #cd0511;
+
+  border-bottom: 1px solid #dedede;
   white-space: nowrap;
   user-select: none;
 }
 
 .th:last-child {
-  text-align: right;
-}
-
-.tr:nth-child(even) {
-  background: var(--accent-bg);
+  text-align: left;
 }
 
 .tr:hover {
-  background: var(--accent-bg);
+  background: var(--code-bg);
+}
+
+.tr:hover .td {
+  color: #fff;
 }
 
 .td {
+  text-align: left;
   padding: var(--space-3) var(--space-5);
   color: var(--text-h);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid #dedede;
 }
 
 .td:last-child {
-  text-align: right;
   font-weight: 600;
-  color: var(--accent);
+  color: #161616;
 }
 
 .cardContainer {
