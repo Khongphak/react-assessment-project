@@ -127,13 +127,15 @@ export default function Hero() {
                 className={styles.checkbox}
                 {...register("privacyPolicy")}
               />
-              I have read and accepted the{" "}
-              <span className={styles.checkboxLabelHighlight}>
-                Privacy Policy
-              </span>{" "}
-              and{" "}
-              <span className={styles.checkboxLabelHighlight}>
-                Terms and Conditions
+              <span>
+                I have read and accepted the{" "}
+                <span className={styles.checkboxLabelHighlight}>
+                  Privacy Policy
+                </span>{" "}
+                and{" "}
+                <span className={styles.checkboxLabelHighlight}>
+                  Terms and Conditions
+                </span>
               </span>
             </label>
             {errors.privacyPolicy && (

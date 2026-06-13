@@ -112,7 +112,8 @@
 
 .checkboxLabel {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  text-align: left;
   gap: 0.5rem;
   color: #999999;
   font-size: 0.875rem;
