@@ -130,6 +130,9 @@ export default function LeaderboardTable({ data }: LeaderboardTableProps) {
               ))}
             </tbody>
           </table>
+          <p className={styles.tableDesc}>
+            Nam quam nunc, blandit vel, luctus pulvinar
+          </p>
         </div>
       </div>
       <JoinNowButton
