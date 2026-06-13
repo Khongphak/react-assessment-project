@@ -103,6 +103,10 @@
   background-color: #fff;
 }
 
+.imageTrophy {
+  width: 35%;
+}
+
 .cardItemDetail {
   margin-left: 1.5rem;
   text-align: left;
@@ -111,7 +115,7 @@
   text-transform: uppercase;
   font-weight: 700;
   font-style: Bold;
-  font-size: 1.125rem;
+  font-size: var(--font-size-1);
   line-height: 100%;
   letter-spacing: 0%;
 }
@@ -126,7 +130,7 @@
 .cardContainer span:nth-child(2) {
   margin-top: 1.5rem;
   color: #000;
-  font-size: 1.125rem;
+
   font-weight: 400;
 }
 
@@ -134,13 +138,11 @@
   margin-top: 0.5rem;
   color: #a8a8a8;
   font-weight: 400;
-  font-size: 1.125rem;
 }
 
 .cardContainer span:nth-child(4) {
   margin-top: 1.5rem;
   color: red;
-  font-size: 1.125rem;
 }
 
 .cardContainer span.totalStyle {
@@ -163,7 +165,7 @@
   padding: 0.75rem 0;
   background: linear-gradient(90deg, #fcd678 0%, #bc8c2f 100%);
   color: #fff;
-  font-size: 1.5rem;
+  font-size: var(--font-size-2);
   font-weight: 700;
   text-align: center;
   transform: rotate(45deg);
@@ -191,15 +193,21 @@
 
   .cardItemContainer {
     width: 22.5rem;
+    height: 12.5rem;
   }
 }
 
 @media (max-width: 1024px) {
+  .leaderBoardContainer {
+    padding: var(--space-5) var(--space-5) var(--space-7) var(--space-5);
+  }
+
   .leaderContent {
-    padding: 1.5rem 3rem;
+    padding: var(--space-5);
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: var(--space-7);
   }
 
   .tableContentwrapper {
@@ -208,15 +216,33 @@
 
   .cardItemContainer {
     width: 18.5rem;
+    height: 9.5rem;
+  }
+  .rewardBadge {
+    top: 0.75rem;
+    right: -4.5rem;
   }
 }
 
 @media (max-width: 768px) {
-  .leaderContent {
-    padding: 1.5rem 1.5rem;
+  .cardItemContainer {
+    width: 18.5rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .cardItemContainer {
+    width: 14rem;
+    height: 7rem;
   }
 
-  .cardItemContainer {
-    width: 14.5rem;
+  .rewardBadge {
+    top: 0.75rem;
+    right: -4.75rem;
+    padding: 0.5rem 0;
+  }
+
+  .imageTrophy {
+    width: 25%;
   }
 }

@@ -64,7 +64,11 @@ export default function LeaderboardTable({ data }: LeaderboardTableProps) {
         <div className={styles.cardContainer}>
           {mockTopPerformers.map((item, idx) => (
             <div className={styles.cardItemContainer} key={item.name}>
-              <img src={item.icon} alt={item.name} />
+              <img
+                src={item.icon}
+                alt={item.name}
+                className={styles.imageTrophy}
+              />
 
               <div className={styles.cardItemDetail}>
                 <span>
