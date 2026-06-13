@@ -1,5 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useForm, useWatch } from "react-hook-form";
 import { z } from "zod";
 
@@ -69,6 +69,11 @@ export default function Hero() {
     resolver: zodResolver(schema),
   });
 
+  const [notification, setNotification] = useState<{
+    type: "success" | "error";
+    message: string;
+  } | null>(null);
+
   const selectedCountry = useWatch({ control, name: "country" });
 
   useEffect(() => {
@@ -80,8 +85,13 @@ export default function Hero() {
   }, [selectedCountry, setValue]);
 
   const onSubmit = async (_data: FormValues) => {
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-    console.log("Form submitted with data:", _data);
+    try {
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+      console.log("Form submitted with data:", _data);
+      setNotification({ type: "success", message: "Form submitted successfully!" });
+    } catch {
+      setNotification({ type: "error", message: "Something went wrong. Please try again." });
+    }
   };
 
   return (
@@ -200,6 +210,11 @@ export default function Hero() {
             <span className={styles.checkboxError}>
               {errors.privacyPolicy.message}
             </span>
+          )}
+          {notification && (
+            <div className={`${styles.notification} ${styles[notification.type]}`}>
+              {notification.message}
+            </div>
           )}
         </form>
       </div>
