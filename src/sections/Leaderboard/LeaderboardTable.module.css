@@ -1,3 +1,24 @@
+.leaderBoardContainer {
+  background-color: #f4f4f4;
+  padding: 1.5rem;
+}
+
+.leaderContent {
+  display: flex;
+
+  gap: var(--space-8);
+  padding: 1.5rem 15rem;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 3.125rem;
+  line-height: 3.125rem;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .wrapper {
   width: 100%;
   overflow-x: auto;
@@ -42,4 +63,93 @@
   text-align: right;
   font-weight: 600;
   color: var(--accent);
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.cardItemContainer {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: flex-start;
+  width: 29.5rem;
+  height: 13.125rem;
+  border-radius: 1.5rem;
+  padding: 1rem 3rem;
+  background-color: #fff;
+}
+
+.cardItemDetail {
+  margin-left: 1.5rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 1.125rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.cardContainer span:nth-child(1) {
+  background: linear-gradient(90deg, #fcd678 0%, #fcd678 0.01%, #bc8c2f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cardContainer span:nth-child(2) {
+  margin-top: 1.5rem;
+  color: #000;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.cardContainer span:nth-child(3) {
+  margin-top: 0.5rem;
+  color: #a8a8a8;
+  font-weight: 400;
+  font-size: 1.125rem;
+}
+
+.cardContainer span:nth-child(4) {
+  margin-top: 1.5rem;
+  color: red;
+  font-size: 1.125rem;
+}
+
+.cardContainer span.totalStyle {
+  color: #000;
+  -webkit-text-fill-color: #000;
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+}
+
+.ordinalStyle {
+  text-transform: lowercase;
+}
+
+.rewardBadge {
+  position: absolute;
+  top: 2rem;
+  right: -3.75rem;
+  width: 13rem;
+  padding: 0.75rem 0;
+  background: linear-gradient(90deg, #fcd678 0%, #bc8c2f 100%);
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  transform: rotate(45deg);
+  transform-origin: center;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
