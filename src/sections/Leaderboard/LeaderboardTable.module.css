@@ -1,0 +1,253 @@
+@import "../../styles/breakpoints.css";
+
+.leaderBoardContainer {
+  background-color: var(--bg-secondary);
+  padding: var(--space-5) var(--space-5);
+}
+
+.leaderContent {
+  display: flex;
+
+  gap: var(--space-8);
+  padding: 1.5rem 15rem;
+}
+
+.title {
+  font-weight: 400;
+  font-size: var(--font-size-8);
+  line-height: var(--font-size-8);
+  letter-spacing: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.tableContentwrapper {
+  width: 100%;
+  overflow-x: auto;
+  text-align: left;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+  table-layout: fixed;
+}
+
+.th:first-child {
+  width: 66.67%;
+}
+
+.th:last-child {
+  width: 33.33%;
+}
+
+.th {
+  padding: var(--space-3) var(--space-5);
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--color-brand-red);
+
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.th:last-child {
+  text-align: left;
+}
+
+.tr:hover {
+  background: var(--code-bg);
+}
+
+.tr:hover .td {
+  color: var(--text-color-1);
+}
+
+.td {
+  text-align: left;
+  padding: var(--space-3) var(--space-5);
+  color: var(--text-h);
+  border-bottom: 1px solid var(--border);
+}
+
+.td:last-child {
+  font-weight: 600;
+  color: var(--bg-color-1);
+}
+
+.tableDesc {
+  font-weight: 400;
+  font-size: 0.75rem;
+  margin-top: 1.5rem;
+  text-align: left;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.cardItemContainer {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: flex-start;
+  width: 29.5rem;
+  height: 13.125rem;
+  border-radius: 1.5rem;
+  padding: 1rem 3rem;
+  background-color: var(--bg);
+}
+
+.imageTrophy {
+  width: 35%;
+}
+
+.cardItemDetail {
+  margin-left: 1.5rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: var(--font-size-1);
+  line-height: 100%;
+  letter-spacing: normal;
+}
+
+.cardContainer span:nth-child(1) {
+  background: linear-gradient(90deg, #fcd678 0%, #fcd678 0.01%, #bc8c2f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cardContainer span:nth-child(2) {
+  margin-top: 1.5rem;
+  color: var(--text-h);
+
+  font-weight: 400;
+}
+
+.cardContainer span:nth-child(3) {
+  margin-top: 0.5rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.cardContainer span:nth-child(4) {
+  margin-top: 1.5rem;
+  color: var(--error-color);
+}
+
+.cardContainer span.totalStyle {
+  color: var(--text-h);
+  -webkit-text-fill-color: var(--text-h);
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+}
+
+.ordinalStyle {
+  text-transform: lowercase;
+}
+
+.rewardBadge {
+  position: absolute;
+  top: 1.5rem;
+  right: -3.5rem;
+  width: 13rem;
+  padding: 0.75rem 0;
+  background: linear-gradient(90deg, #fcd678 0%, #bc8c2f 100%);
+  color: var(--text-color-1);
+  font-size: var(--font-size-2);
+  font-weight: 700;
+  text-align: center;
+  transform: rotate(45deg);
+  transform-origin: center;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.joinButton {
+  margin-top: 1.5rem;
+  width: 18.75rem;
+  height: 3.375rem;
+}
+
+@media (--2xl) {
+  .leaderContent {
+    padding: 1.5rem 10rem;
+  }
+}
+
+@media (--xl) {
+  .leaderContent {
+    padding: 1.5rem 6rem;
+  }
+
+  .cardItemContainer {
+    width: 22.5rem;
+    height: 12.5rem;
+  }
+}
+
+@media (--lg) {
+  .leaderBoardContainer {
+    padding: var(--space-5) var(--space-5) var(--space-7) var(--space-5);
+  }
+
+  .leaderContent {
+    padding: var(--space-5);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-7);
+  }
+
+  .tableContentwrapper {
+    text-align: center;
+  }
+
+  .cardItemContainer {
+    width: 18.5rem;
+    height: 9.5rem;
+  }
+  .rewardBadge {
+    top: 0.75rem;
+    right: -4.5rem;
+  }
+}
+
+@media (--md) {
+  .cardContainer span:nth-child(2) {
+    margin-top: 1rem;
+  }
+
+  .cardContainer span:nth-child(4) {
+    margin-top: 1rem;
+  }
+}
+
+@media (--sm) {
+  .cardItemContainer {
+    width: 14rem;
+    height: 7rem;
+  }
+
+  .rewardBadge {
+    top: 0.75rem;
+    right: -4.75rem;
+    padding: 0.5rem 0;
+  }
+
+  .imageTrophy {
+    width: 25%;
+  }
+}

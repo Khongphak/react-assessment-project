@@ -1,21 +1,25 @@
-import "./App.css";
+import styles from "./App.module.css";
 import Footer from "./components/layout/Footer";
 import Topbar from "./components/layout/Topbar";
-import Benefits from "./sections/Benefits";
-import CTA from "./sections/CTA";
+import Prize from "./sections/Prize";
+import FAQ from "./sections/FAQ";
+import Features from "./sections/Features";
 import Hero from "./sections/Hero";
+import LeaderboardTable, { mockLeaderboardData } from "./sections/Leaderboard";
 
 function App() {
   return (
-    <div style={{ display: "flex", flexDirection: "column", minHeight: "100svh" }}>
+    <>
       <Topbar />
-      <main style={{ flex: 1 }}>
+      <main className={styles.main}>
         <Hero />
-        <Benefits />
-        <CTA />
+        <Features />
+        <Prize />
+        <LeaderboardTable data={mockLeaderboardData} />
+        <FAQ />
       </main>
       <Footer />
-    </div>
+    </>
   );
 }
 

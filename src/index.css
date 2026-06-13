@@ -1,40 +1,74 @@
+@import "./styles/breakpoints.css";
+
 :root {
+  /* Colors */
+
   --text: #6b6375;
   --text-h: #08060d;
+  --text-color-1: #ffffff;
+  --text-color-2: #eeeeee;
+
   --bg: #fff;
+  --bg-secondary: #f4f4f4;
+  --bg-color-1: #161616;
   --border: #e5e4e7;
+  --color-brand-red: #cd0511;
+  --text-muted: #a8a8a8;
   --code-bg: #f4f3ec;
   --accent: #aa3bff;
   --accent-bg: rgba(170, 59, 255, 0.1);
   --accent-border: rgba(170, 59, 255, 0.5);
   --social-bg: rgba(244, 243, 236, 0.5);
+  --success-color: #159149;
+  --error-color: #cf0411;
+
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  /* Font stacks */
+  --sans: "Open Sans", system-ui, sans-serif;
+  --heading: "Sofia Sans Condensed", system-ui, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
+  /* Spacing (1rem = 16px) */
+  --space-1: 0.25rem; /* 4px */
+  --space-2: 0.5rem; /* 8px */
+  --space-3: 0.75rem; /* 12px */
+  --space-4: 1rem; /* 16px */
+  --space-5: 1.5rem; /* 24px */
+  --space-6: 2rem; /* 32px */
+  --space-7: 4rem; /* 64px */
+  --space-8: 5rem; /* 80px */
+  --space-9: 6rem;
+  --space-10: 7rem;
+  --space-11: 8rem;
+  --space-12: 9rem;
+
+  font-size: 16px; /* base: 1rem = 16px */
+  --font-size-1: 1rem; /* 16px */
+  --font-size-2: 1.5rem; /* 24px */
+  --font-size-3: 2rem; /* 32px */
+  --font-size-4: 2.25rem; /* 36px */
+  --font-size-5: 2.5rem; /* 40px */
+  --font-size-6: 2.75rem; /* 44px */
+  --font-size-7: 3rem; /* 48px */
+  --font-size-8: 3.125rem; /* 50px */
+
+  --radius-sm: 0.25rem; /* 4px */
+  --radius-md: 0.5rem; /* 8px */
+  --radius-lg: 1rem; /* 16px */
+  --radius-full: 9999px;
+
   color-scheme: light dark;
   color: var(--text);
   background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
+    /* --text-h: #f3f4f6; */
+    /* --bg: #16171d; */
     --border: #2e303a;
     --code-bg: #1f2028;
     --accent: #c084fc;
@@ -51,11 +85,10 @@
 }
 
 #root {
-  width: 1126px;
-  max-width: 100%;
+  /* width: 1126px; */
+  /* max-width: 100%; */
   margin: 0 auto;
   text-align: center;
-  border-inline: 1px solid var(--border);
   min-height: 100svh;
   display: flex;
   flex-direction: column;
@@ -64,6 +97,18 @@
 
 body {
   margin: 0;
+  font-family: var(--sans);
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.45;
+  letter-spacing: 0.18px;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (--lg) {
+    font-size: 1rem; /* 16px */
+  }
 }
 
 h1,
@@ -74,38 +119,79 @@ h2 {
 }
 
 h1 {
-  font-size: 56px;
+  font-size: 3.5rem;
   letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
+  margin: var(--space-6) 0;
+
+  @media (--lg) {
+    font-size: 2.25rem;
+    margin: 1.25rem 0;
   }
 }
+
 h2 {
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 118%;
   letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
+  margin: 0 0 var(--space-2);
+
+  @media (--lg) {
+    font-size: 1.25rem;
   }
 }
+
 p {
   margin: 0;
 }
 
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
+@media (--xl) {
+  :root {
+    --font-size-1: 0.9375rem; /* 15px */
+    --font-size-2: 1.375rem; /* 22px */
+    --font-size-3: 1.75rem; /* 28px */
+    --font-size-4: 2rem; /* 32px */
+    --font-size-5: 2.25rem; /* 36px */
+    --font-size-6: 2.5rem; /* 40px */
+    --font-size-7: 2.75rem; /* 44px */
+    --font-size-8: 3rem; /* 48px */
+  }
 }
 
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
+@media (--lg) {
+  :root {
+    --font-size-1: 0.875rem; /* 14px */
+    --font-size-2: 1.25rem; /* 20px */
+    --font-size-3: 1.5rem; /* 24px */
+    --font-size-4: 1.75rem; /* 28px */
+    --font-size-5: 2rem; /* 32px */
+    --font-size-6: 2.25rem; /* 36px */
+    --font-size-7: 2.5rem; /* 40px */
+    --font-size-8: 2.75rem; /* 44px */
+  }
+}
+
+@media (--md) {
+  :root {
+    --font-size-1: 0.875rem; /* 14px */
+    --font-size-2: 1rem; /* 16px */
+    --font-size-3: 1.25rem; /* 20px */
+    --font-size-4: 1.5rem; /* 24px */
+    --font-size-5: 1.75rem; /* 28px */
+    --font-size-6: 2rem; /* 32px */
+    --font-size-7: 2.25rem; /* 36px */
+    --font-size-8: 2.5rem; /* 40px */
+  }
+}
+
+@media (--sm) {
+  :root {
+    --font-size-1: 0.75rem; /* 12px */
+    --font-size-2: 0.875rem; /* 14px */
+    --font-size-3: 1rem; /* 16px */
+    --font-size-4: 1.25rem; /* 20px */
+    --font-size-5: 1.5rem; /* 24px */
+    --font-size-6: 1.75rem; /* 28px */
+    --font-size-7: 2.2rem; /* 32px */
+    --font-size-8: 2.25rem; /* 36px */
+  }
 }
