@@ -3,7 +3,7 @@
   padding: var(--space-8) var(--space-6) var(--space-6) var(--space-6);
   margin-top: auto;
   background-color: #161616;
-  height: 20.625rem;
+  min-height: 20.625rem;
   display: flex;
   flex-direction: column;
 }
@@ -64,4 +64,20 @@
   font-weight: 400;
   font-size: 0.688rem;
   letter-spacing: 0%;
+}
+
+@media (max-width: 768px) {
+  .inner {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .inner .innerLeft {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .inner .innerRight {
+    gap: 1rem;
+  }
 }
