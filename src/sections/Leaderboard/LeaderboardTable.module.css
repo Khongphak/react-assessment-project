@@ -19,9 +19,10 @@
   text-transform: uppercase;
 }
 
-.wrapper {
+.tableContentwrapper {
   width: 100%;
   overflow-x: auto;
+  text-align: left;
 }
 
 .table {
@@ -139,8 +140,8 @@
 
 .rewardBadge {
   position: absolute;
-  top: 2rem;
-  right: -3.75rem;
+  top: 1.5rem;
+  right: -3.5rem;
   width: 13rem;
   padding: 0.75rem 0;
   background: linear-gradient(90deg, #fcd678 0%, #bc8c2f 100%);
@@ -152,4 +153,47 @@
   transform-origin: center;
   text-transform: uppercase;
   letter-spacing: 0.02em;
+}
+
+@media (max-width: 1440px) {
+  .leaderContent {
+    padding: 1.5rem 10rem;
+  }
+}
+
+@media (max-width: 1280px) {
+  .leaderContent {
+    padding: 1.5rem 6rem;
+  }
+
+  .cardItemContainer {
+    width: 22.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .leaderContent {
+    padding: 1.5rem 3rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tableContentwrapper {
+    text-align: center;
+  }
+
+  .cardItemContainer {
+    width: 18.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .leaderContent {
+    padding: 1.5rem 1.5rem;
+  }
+
+  .cardItemContainer {
+    width: 14.5rem;
+  }
 }

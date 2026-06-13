@@ -78,7 +78,7 @@ export default function LeaderboardTable({ data }: LeaderboardTableProps) {
             </div>
           ))}
         </div>
-        <div className={styles.wrapper}>
+        <div className={styles.tableContentwrapper}>
           <h2>Aliquam lorem ant</h2>
           <table className={styles.table}>
             <thead>
