@@ -1,11 +1,14 @@
 .section {
-  padding: var(--space-8) var(--space-5);
-  border-top: 1px solid var(--border);
+  padding: var(--space-6) var(--space-5) var(--space-10) var(--space-5);
 }
 
-.heading {
+.title {
+  font-weight: 400;
+  font-size: 3.125rem;
+  line-height: 3.125rem;
+  letter-spacing: 0%;
   text-align: center;
-  margin-bottom: var(--space-6);
+  text-transform: uppercase;
 }
 
 .wrapper {

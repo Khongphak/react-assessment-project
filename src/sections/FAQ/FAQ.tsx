@@ -32,7 +32,7 @@ const items: AccordionItem[] = [
 export default function FAQ() {
   return (
     <section className={styles.section}>
-      <h2 className={styles.heading}>Frequently Asked Questions</h2>
+      <h2 className={styles.title}>FAQs</h2>
       <div className={styles.wrapper}>
         <Accordion items={items} />
       </div>

@@ -1,6 +1,6 @@
 .leaderBoardContainer {
   background-color: #f4f4f4;
-  padding: 1.5rem;
+  padding: var(--space-5) var(--space-5);
 }
 
 .leaderContent {
