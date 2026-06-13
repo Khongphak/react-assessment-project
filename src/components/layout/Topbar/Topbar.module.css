@@ -134,3 +134,136 @@
   align-items: center;
   justify-content: center;
 }
+
+/* Hamburger button — desktop hidden, mobile visible */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.3125rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.hamburger span {
+  display: block;
+  width: 1.5rem;
+  height: 0.125rem;
+  background-color: #fff;
+  border-radius: 0.125rem;
+}
+
+/* Overlay */
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.overlayOpen {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Sidebar drawer */
+.sidebar {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 16rem;
+  background: var(--bg-color-1);
+  border-left: 0.0625rem solid var(--border);
+  z-index: 100;
+  flex-direction: column;
+  padding: 1.5rem 1.5rem 0rem 1.5rem;
+  gap: 1rem;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.sidebarOpen {
+  transform: translateX(0);
+}
+
+.closeButton {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  line-height: 1;
+}
+
+.sidebarNav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sidebarNav a {
+  color: var(--text-color-2);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.sidebarNav a:hover {
+  color: var(--text-color-1);
+}
+
+.sidebarActions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: 2.75rem;
+}
+
+/* Mobile breakpoint */
+@media (max-width: 54rem) {
+  .logoMessage {
+    font-size: 0.35rem;
+    line-height: 0.35rem;
+  }
+  .topbarLogo {
+    width: 45%;
+    padding-top: 0.5rem;
+  }
+
+  .sidebarActions {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+  }
+
+  .topbarInner {
+    height: 4rem;
+  }
+
+  .topbarRight {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .overlay {
+    display: block;
+  }
+
+  .sidebar {
+    display: flex;
+  }
+}
