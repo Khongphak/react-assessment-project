@@ -81,3 +81,10 @@
     gap: 1rem;
   }
 }
+
+@media (max-width: 540px) {
+  .inner .innerLeft {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
