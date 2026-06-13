@@ -3,7 +3,7 @@
 }
 .title {
   font-weight: 400;
-  font-size: 3.125rem;
+  font-size: var(--font-size-8);
   line-height: 3.125rem;
   letter-spacing: 0%;
   text-align: center;

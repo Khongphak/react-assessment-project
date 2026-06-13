@@ -102,8 +102,8 @@ export default function Hero() {
 
   return (
     <section className={styles.section}>
-      <h1 className={styles.headline1}>Lorem ipsum dolor</h1>
-      <h1 className={styles.headline2}>sit amet tosik</h1>
+      <h1 className={styles.headerTitle1 }>Lorem ipsum dolor</h1>
+      <h1 className={styles.headerTitle2}>sit amet tosik</h1>
 
       <div className={styles.formContainer}>
         <p className={styles.formTitle}>Lorem ipsum dolor sit amet</p>

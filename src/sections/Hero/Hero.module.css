@@ -14,7 +14,7 @@
   flex-direction: column;
 }
 
-.headline1 {
+.headerTitle1 {
   margin-top: 1.5rem;
   margin-bottom: 0;
   font-weight: 700;
@@ -33,7 +33,7 @@
   -webkit-text-fill-color: transparent;
 }
 
-.headline2 {
+.headerTitle2 {
   margin: 0;
   font-weight: 700;
   font-style: Bold;
@@ -190,4 +190,31 @@
   background-color: #fef2f2;
   color: #dc2626;
   border: 1px solid #fecaca;
+}
+
+/* Mobile breakpoint */
+@media (max-width: 54rem) {
+  .section {
+    padding: var(--space-4) 0;
+    margin-left: 0rem;
+  }
+
+  .formContainer {
+    padding: 1.75rem;
+    margin: 1.875rem 1rem 2.5rem 1rem;
+  }
+
+  .formTitle {
+    font-size: 1.125rem;
+  }
+
+  .headerTitle1 {
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+  }
+
+  .headerTitle2 {
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+  }
 }

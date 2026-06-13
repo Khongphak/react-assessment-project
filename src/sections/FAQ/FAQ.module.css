@@ -4,8 +4,8 @@
 
 .title {
   font-weight: 400;
-  font-size: 3.125rem;
-  line-height: 3.125rem;
+  font-size: var(--font-size-8);
+  line-height: var(--font-size-8);
   letter-spacing: 0%;
   text-align: center;
   text-transform: uppercase;
