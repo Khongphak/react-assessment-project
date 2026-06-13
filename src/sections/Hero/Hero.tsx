@@ -14,6 +14,9 @@ const schema = z.object({
   phone: z.string().min(10, "Phone number must be at least 10 digits"),
   email: z.string().email("Please enter a valid email"),
   experience: z.string().min(2, "Experience must be at least 2 characters"),
+  privacyPolicy: z.boolean().refine((val) => val === true, {
+    message: "You must accept the Privacy Policy and Terms and Conditions",
+  }),
 });
 
 type FormValues = z.infer<typeof schema>;
@@ -102,6 +105,25 @@ export default function Hero() {
               error={errors.experience?.message}
               {...register("experience")}
             />
+          </div>
+
+          <div className={styles.checkboxContainer}>
+            <label className={styles.checkboxLabel}>
+              <input
+                type="checkbox"
+                className={styles.checkbox}
+                {...register("privacyPolicy")}
+              />
+              I have read and accepted the{" "}
+              <span className={styles.checkboxLabelHighlight}>Privacy Policy</span>
+              {" "}and{" "}
+              <span className={styles.checkboxLabelHighlight}>Terms and Conditions</span>
+            </label>
+            {errors.privacyPolicy && (
+              <span className={styles.checkboxError}>
+                {errors.privacyPolicy.message}
+              </span>
+            )}
           </div>
 
           <div className={styles.submitButtonContainer}>
