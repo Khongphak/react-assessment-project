@@ -165,6 +165,12 @@
   letter-spacing: 0.02em;
 }
 
+.joinButton {
+  margin-top: 1.5rem;
+  width: 18.75rem;
+  height: 3.375rem;
+}
+
 @media (max-width: 1440px) {
   .leaderContent {
     padding: 1.5rem 10rem;

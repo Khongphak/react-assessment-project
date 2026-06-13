@@ -9,6 +9,7 @@ import {
 import { useState } from "react";
 import styles from "./LeaderboardTable.module.css";
 import { mockTopPerformers, type LeaderboardEntry } from "./leaderboardData";
+import JoinNowButton from "../../components/ui/JoinNowButton";
 
 function ordinal(idx: number): string {
   const rules = new Intl.PluralRules("en", { type: "ordinal" });
@@ -40,6 +41,12 @@ type LeaderboardTableProps = {
 
 export default function LeaderboardTable({ data }: LeaderboardTableProps) {
   const [sorting, setSorting] = useState<SortingState>([]);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleClick = () => {
+    setIsSubmitting(true);
+    setTimeout(() => setIsSubmitting(false), 2000);
+  };
 
   const table = useReactTable({
     data,
@@ -125,6 +132,13 @@ export default function LeaderboardTable({ data }: LeaderboardTableProps) {
           </table>
         </div>
       </div>
+      <JoinNowButton
+        className={styles.joinButton}
+        isShowTerm={true}
+        isSubmitting={isSubmitting}
+        onClick={handleClick}
+        type="button"
+      />
     </div>
   );
 }

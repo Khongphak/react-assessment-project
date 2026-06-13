@@ -46,7 +46,7 @@ export default function Prize() {
       </div>
       <JoinNowButton
         className={styles.joinButton}
-        isShow={true}
+        isShowTerm={true}
         isSubmitting={isSubmitting}
         onClick={handleClick}
         type="button"
