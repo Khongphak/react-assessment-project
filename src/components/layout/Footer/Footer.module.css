@@ -1,18 +1,67 @@
 .footer {
   background: var(--bg);
-  padding: var(--space-5);
+  padding: var(--space-8) var(--space-3) var(--space-6) var(--space-3);
   margin-top: auto;
   background-color: #161616;
   height: 20.625rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .inner {
-  max-width: 900px;
+  max-width: 1440px;
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-2);
+  align-items: stretch;
+  justify-content: space-between;
+  gap: var(--space-9);
   font-size: 0.875rem;
   color: var(--text);
+  /* flex: 1; */
+}
+
+.socialApps {
+  margin-left: -1.25rem;
+}
+
+.inner .innerLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.title {
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 1rem;
+  line-height: 26px;
+  letter-spacing: 0%;
+  color: #fff;
+}
+
+.innerLeft .downloadAppContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.innerLeft .downloadAppContainer .appsImageContainer {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.inner .innerRight {
+  display: flex;
+  flex-direction: column;
+  gap: 2.75rem;
+
+  text-align: left;
+}
+
+.riskWarningDesc {
+  font-weight: 400;
+  font-size: 0.688rem;
+  letter-spacing: 0%;
 }
