@@ -1,0 +1,103 @@
+@import "../../styles/breakpoints.css";
+
+.featuresContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1.5rem 0rem 1.5rem;
+  background-color: var(--bg-secondary);
+}
+
+.title {
+  font-weight: 400;
+  font-size: var(--font-size-8);
+  line-height: 3.125rem;
+  letter-spacing: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.featuresContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.boxContainer {
+  max-width: 15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4.75rem;
+  text-align: right;
+  margin-bottom: 3.75rem;
+}
+
+.boxContainerRight {
+  text-align: left;
+}
+
+.mobilePhoneImageStyle {
+  margin: 2rem 1.25rem 0rem 1.25rem;
+  max-width: 35.25rem;
+  align-self: flex-end;
+}
+
+@media (--lg) {
+  .featuresContainer {
+    padding: 2rem 5rem 0rem 5rem;
+  }
+
+  .featureIcon {
+    width: 25%;
+  }
+  .mobilePhoneImageStyle {
+    width: 40%;
+    margin: 2rem 2.5rem 0rem 2.5rem;
+  }
+}
+
+@media (--tablet) {
+  .featuresContainer {
+    padding: 2rem 1.5rem 0rem 1.5rem;
+  }
+
+  .boxContainer {
+    gap: 1.25rem;
+    margin-bottom: 1.75rem;
+  }
+  .featureIcon {
+    width: 20%;
+  }
+
+  .mobilePhoneImageStyle {
+    width: 30%;
+  }
+}
+
+@media (--md) {
+  .boxContainer {
+    gap: 1.5rem;
+    margin-bottom: 1.75rem;
+  }
+  .featuresContainer {
+    font-size: 0.5rem;
+    padding: 0rem 1rem;
+  }
+  .mobilePhoneImageStyle {
+    width: 55%;
+    margin: 0.5rem 0.75rem 0rem 0.75rem;
+  }
+
+  .featureIcon {
+    width: 50%;
+  }
+}
+
+@media (--sm) {
+  .featureIcon {
+    width: 30%;
+  }
+  .mobilePhoneImageStyle {
+    width: 45%;
+  }
+}

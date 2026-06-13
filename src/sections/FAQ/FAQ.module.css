@@ -1,0 +1,17 @@
+.section {
+  padding: var(--space-6) var(--space-5) var(--space-10) var(--space-5);
+}
+
+.title {
+  font-weight: 400;
+  font-size: var(--font-size-8);
+  line-height: var(--font-size-8);
+  letter-spacing: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.wrapper {
+  max-width: 720px;
+  margin: 0 auto;
+}

@@ -1,16 +1,33 @@
+@import "../../../styles/breakpoints.css";
+
 .topbar {
-  border-bottom: 1px solid var(--border);
-  background: var(--bg);
+  border-bottom: 0.0625rem solid var(--border);
+  background: var(--bg-color-1);
   position: sticky;
   top: 0;
   z-index: 50;
 }
 
+.logoMessage {
+  font-family: Open Sans;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 0.625rem;
+  line-height: 0.625rem;
+  letter-spacing: normal;
+  vertical-align: middle;
+  color: #a8a8a8;
+}
+
+.topbarLogo {
+  padding-top: 0.75rem;
+}
+
 .topbarInner {
-  max-width: 900px;
+  max-width: 78rem;
   margin: 0 auto;
-  padding: 0 24px;
-  height: 56px;
+  padding: 0 var(--space-5);
+  height: 8.25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -18,23 +35,237 @@
 
 .topbarBrand {
   font-weight: 600;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: var(--text-h);
   text-decoration: none;
 }
 
 .topbarNav {
   display: flex;
-  gap: 24px;
-  font-size: 15px;
+  gap: var(--space-5);
+  font-size: 0.875rem;
 }
 
 .topbarNav a {
-  color: var(--text);
+  color: var(--text-color-2);
   text-decoration: none;
   transition: color 0.2s;
 }
 
 .topbarNav a:hover {
-  color: var(--accent);
+  color: var(--text-color-1);
+  font-weight: 400;
+}
+
+.topbarInfoLinks {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.25rem;
+  font-size: 0.875rem;
+}
+
+.topbarInfoLinks a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.topbarInfoLinks a:visited {
+  color: #fff;
+}
+
+.topbarRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0.625rem;
+}
+
+.topbarBottom {
+  display: flex;
+  gap: 1.875rem;
+  align-items: center;
+}
+
+.downloadApp {
+  display: flex;
+  align-items: center;
+  border: 0.0625rem solid var(--text-color-2);
+  border-radius: 0.25rem;
+  padding: 0.3125rem 0.625rem;
+}
+
+.mobileIcon {
+  width: 0.60625rem;
+  height: 1.154375rem;
+  margin-right: 0.3125rem;
+}
+
+.divider {
+  width: 0.0625rem;
+  height: 1rem;
+  background-color: #414141;
+}
+
+.flagIcon {
+  width: 1.0625rem;
+  height: 1.0625rem;
+  margin-right: 0.3125rem;
+}
+
+.topbarActions {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.loginButton {
+  width: 5.063rem;
+  height: 2.188rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.registerButton {
+  width: 6.9385rem;
+  height: 2.188rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hamburger button — desktop hidden, mobile visible */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.3125rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.hamburger span {
+  display: block;
+  width: 1.5rem;
+  height: 0.125rem;
+  background-color: #fff;
+  border-radius: 0.125rem;
+}
+
+/* Overlay */
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.overlayOpen {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Sidebar drawer */
+.sidebar {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 16rem;
+  background: var(--bg-color-1);
+  border-left: 0.0625rem solid var(--border);
+  z-index: 100;
+  flex-direction: column;
+  padding: 1.5rem 1.5rem 0rem 1.5rem;
+  gap: 1rem;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.sidebarOpen {
+  transform: translateX(0);
+}
+
+.closeButton {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  line-height: 1;
+}
+
+.sidebarNav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sidebarNav a {
+  color: var(--text-color-2);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.sidebarNav a:hover {
+  color: var(--text-color-1);
+}
+
+.sidebarActions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: 2.75rem;
+}
+
+/* Mobile breakpoint */
+@media (--tablet) {
+  .logoMessage {
+    font-size: 0.35rem;
+    line-height: 0.35rem;
+  }
+  .topbarLogo {
+    width: 45%;
+    padding-top: 0.5rem;
+  }
+
+  .sidebarActions {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+  }
+
+  .topbarInner {
+    height: 4rem;
+  }
+
+  .topbarRight {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .overlay {
+    display: block;
+  }
+
+  .sidebar {
+    display: flex;
+  }
 }
