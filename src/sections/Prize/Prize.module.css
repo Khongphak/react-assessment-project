@@ -10,8 +10,9 @@
   text-transform: uppercase;
 }
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(9.75rem, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 3rem;
   max-width: 75rem;
   margin: 4.5rem auto 0 auto;
@@ -20,14 +21,29 @@
 
 .itemContainer {
   background-color: #f4f4f4;
-  width: 22rem;
-  height: 22rem;
+  flex: 1 1 18rem;
+  max-width: 22rem;
+  aspect-ratio: 1 / 1;
+  padding: 1rem;
   border-radius: 1.25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
+}
+
+@media (max-width: 48rem) {
+  .grid {
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .itemContainer {
+    flex: 0 0 55%;
+    max-width: 55%;
+    aspect-ratio: 4 / 3;
+  }
 }
 
 .priceText {
