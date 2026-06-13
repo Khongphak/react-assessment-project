@@ -25,33 +25,20 @@ export const mockLeaderboardData: LeaderboardEntry[] = [
 ];
 
 
-export const mockTopPerformers: ITopThree[] = [
-  {
-    icon: 'src/assets/icons/leaderboard/icon-trophy-1.svg',
-    titlePrefix: 'January',
-    titleSuffix: 'Winner',
-    name: 'John Smith',
-    id: 5678987654,
-    totalGainPercent: 16344,
-    reward: 1000,
-  },
-  {
-    icon: 'src/assets/icons/leaderboard/icon-trophy-2.svg',
-    titlePrefix: 'January',
-    titleSuffix: 'Winner',
-    name: 'John Smith',
-    id: 5678987654,
-    totalGainPercent: 16344,
-    reward: 1000,
-  },
-  {
-    icon: 'src/assets/icons/leaderboard/icon-trophy-3.svg',
-    titlePrefix: 'January',
-    titleSuffix: 'Winner',
-    name: 'John Smith',
-    id: 5678987654,
-    totalGainPercent: 16344,
-    reward: 1000,
-  },
-
+const rankMeta = [
+  { icon: 'src/assets/icons/leaderboard/icon-trophy-1.svg', reward: 1000 },
+  { icon: 'src/assets/icons/leaderboard/icon-trophy-2.svg', reward: 500 },
+  { icon: 'src/assets/icons/leaderboard/icon-trophy-3.svg', reward: 250 },
 ];
+
+export const mockTopPerformers: ITopThree[] = [...mockLeaderboardData]
+  .sort((a, b) => b.gain - a.gain)
+  .slice(0, 3)
+  .map((entry, i) => ({
+    ...rankMeta[i],
+    titlePrefix: 'January',
+    titleSuffix: 'Winner',
+    name: entry.name,
+    id: 5678987654 + i,
+    totalGainPercent: entry.gain,
+  }));
