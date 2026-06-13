@@ -6,7 +6,7 @@
   background-color: #f4f4f4;
 }
 
-.featuresHeader {
+.title {
   font-weight: 400;
   font-size: 3.125rem;
   line-height: 3.125rem;
@@ -34,4 +34,22 @@
 .mobilePhoneImageStyle {
   margin: 2rem 1.25rem 0rem 1.25rem;
   max-width: 35.25rem;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.25rem;
+  }
+  .boxContainer {
+    gap: 2rem;
+  }
+  .featureContainer {
+    font-size: 0.5rem;
+  }
+  .featureIcon {
+    width: 50%;
+  }
+  .mobilePhoneImageStyle {
+    width: 55%;
+  }
 }
