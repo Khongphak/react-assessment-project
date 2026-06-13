@@ -2,13 +2,13 @@ import styles from "./JoinNowButton.module.css";
 import Button from "../../ui/Button/Button";
 
 export default function JoinNowButton({
-  isShow = false,
+  isShowTerm = false,
   isSubmitting = false,
   onClick,
   type = "submit",
   className,
 }: {
-  isShow?: boolean;
+  isShowTerm?: boolean;
   isSubmitting?: boolean;
   onClick?: () => void;
   type?: "submit" | "button";
@@ -25,7 +25,11 @@ export default function JoinNowButton({
       >
         {isSubmitting ? " Joining..." : " Join Now"}
       </Button>
-      {isShow && <p className={styles.termsText}>Terms and Conditions apply</p>}
+      {isShowTerm && (
+        <p className={styles.termsText} onClick={() => alert("Terms & Condition detail")}>
+          Terms and Conditions apply
+        </p>
+      )}
     </div>
   );
 }
