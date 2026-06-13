@@ -227,8 +227,12 @@
 }
 
 @media (--md) {
-  .cardItemContainer {
-    width: 18.5rem;
+  .cardContainer span:nth-child(2) {
+    margin-top: 1rem;
+  }
+
+  .cardContainer span:nth-child(4) {
+    margin-top: 1rem;
   }
 }
 

@@ -6,7 +6,7 @@ export default function Features() {
       <h1 className={styles.title}>Quisque rutrum</h1>
       <div className={styles.featuresContent}>
         <div className={styles.boxContainer}>
-          <div className={styles.featureContainer}>
+          <div className={styles.itemContainer}>
             <img
               src="/src/assets/icons/features/icon-account.svg"
               alt="icon-account"
@@ -14,7 +14,7 @@ export default function Features() {
             />
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
           </div>
-          <div className={styles.featureContainer}>
+          <div className={styles.itemContainer}>
             <img
               src="/src/assets/icons/features/icon-cash.svg"
               alt="icon-cash"
@@ -30,7 +30,7 @@ export default function Features() {
         />
         <div className={styles.featuresContent}>
           <div className={`${styles.boxContainer} ${styles.boxContainerRight}`}>
-            <div className={styles.featureContainer}>
+            <div className={styles.itemContainer}>
               <img
                 src="/src/assets/icons/features/icon-candle-stick.svg"
                 alt="icon-candle-stick"
@@ -38,7 +38,7 @@ export default function Features() {
               />
               <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
             </div>
-            <div className={styles.featureContainer}>
+            <div className={styles.itemContainer}>
               <img
                 src="/src/assets/icons/features/icon-account.svg"
                 alt="icon-account"

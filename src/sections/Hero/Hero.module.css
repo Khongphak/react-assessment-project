@@ -212,7 +212,7 @@
 
   .headerTitle1,
   .headerTitle2 {
-    font-size: var(--font-size-6);
-    line-height: var(--font-size-6);
+    font-size: var(--font-size-8);
+    line-height: var(--font-size-8);
   }
 }
