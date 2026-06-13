@@ -29,13 +29,15 @@ export default function Accordion({ items }: AccordionProps) {
               aria-expanded={isOpen}
             >
               {item.title}
-              <span
-                className={[styles.icon, isOpen && styles.iconOpen]
+              <i
+                className={[
+                  "pi pi-angle-down",
+                  styles.icon,
+                  isOpen && styles.iconOpen,
+                ]
                   .filter(Boolean)
                   .join(" ")}
-              >
-                ↓
-              </span>
+              />
             </button>
             <div
               className={[styles.content, isOpen && styles.contentOpen]
