@@ -84,6 +84,12 @@ export default function Hero() {
     }
   }, [selectedCountry, setValue]);
 
+  useEffect(() => {
+    if (!notification) return;
+    const timer = setTimeout(() => setNotification(null), 5000);
+    return () => clearTimeout(timer);
+  }, [notification]);
+
   const onSubmit = async (_data: FormValues) => {
     try {
       await new Promise((resolve) => setTimeout(resolve, 2000));
