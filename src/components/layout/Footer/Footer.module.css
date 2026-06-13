@@ -1,3 +1,5 @@
+@import "../../../styles/breakpoints.css";
+
 .footer {
   background: var(--bg);
   padding: var(--space-8) var(--space-6) var(--space-6) var(--space-6);
@@ -66,7 +68,7 @@
   letter-spacing: 0%;
 }
 
-@media (max-width: 768px) {
+@media (--md) {
   .inner {
     flex-direction: column;
     gap: 3rem;
@@ -82,7 +84,7 @@
   }
 }
 
-@media (max-width: 540px) {
+@media (--sm) {
   .inner .innerLeft {
     flex-direction: column;
     gap: 1rem;

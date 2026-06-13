@@ -1,3 +1,5 @@
+@import "../../styles/breakpoints.css";
+
 .leaderBoardContainer {
   background-color: #f4f4f4;
   padding: var(--space-5) var(--space-5);
@@ -180,13 +182,13 @@
   height: 3.375rem;
 }
 
-@media (max-width: 1440px) {
+@media (--2xl) {
   .leaderContent {
     padding: 1.5rem 10rem;
   }
 }
 
-@media (max-width: 1280px) {
+@media (--xl) {
   .leaderContent {
     padding: 1.5rem 6rem;
   }
@@ -197,7 +199,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (--lg) {
   .leaderBoardContainer {
     padding: var(--space-5) var(--space-5) var(--space-7) var(--space-5);
   }
@@ -224,13 +226,13 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (--md) {
   .cardItemContainer {
     width: 18.5rem;
   }
 }
 
-@media (max-width: 540px) {
+@media (--sm) {
   .cardItemContainer {
     width: 14rem;
     height: 7rem;

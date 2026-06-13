@@ -1,3 +1,5 @@
+@import "../../styles/breakpoints.css";
+
 .section {
   padding: var(--space-8) 0;
   text-align: center;
@@ -61,7 +63,7 @@
   padding: 2.5rem;
   margin: 2.75rem auto 2.5rem auto;
 
-  @media (max-width: 768px) {
+  @media (--md) {
     width: 75vw;
   }
 }
@@ -90,7 +92,7 @@
   grid-template-columns: 1fr 1fr;
   gap: var(--space-5);
 
-  @media (max-width: 768px) {
+  @media (--md) {
     grid-template-columns: 1fr;
   }
 }
@@ -107,7 +109,7 @@
     flex: 2;
   }
 
-  @media (max-width: 768px) {
+  @media (--md) {
     flex-direction: column;
   }
 }
@@ -193,7 +195,7 @@
 }
 
 /* Mobile breakpoint */
-@media (max-width: 54rem) {
+@media (--tablet) {
   .section {
     padding: var(--space-4) 0;
     margin-left: 0rem;
