@@ -9,12 +9,12 @@ const items = [
     icon: "src/assets/icons/prizes/icon-medal-1.svg",
   },
   {
-    price: "$1000",
+    price: "$500",
     desc: "Cras dapibus",
     icon: "src/assets/icons/prizes/icon-medal-2.svg",
   },
   {
-    price: "$1000",
+    price: "$250",
     desc: "Cras dapibus",
     icon: "src/assets/icons/prizes/icon-medal-3.svg",
   },
