@@ -6,17 +6,17 @@ const items = [
   {
     price: "$1000",
     desc: "Cras dapibus & Cras dapibus",
-    icon: "src/assets/icons/prizes/icon-medal-1.svg",
+    icon: "/src/assets/icons/prizes/icon-medal-1.svg",
   },
   {
     price: "$500",
     desc: "Cras dapibus",
-    icon: "src/assets/icons/prizes/icon-medal-2.svg",
+    icon: "/src/assets/icons/prizes/icon-medal-2.svg",
   },
   {
     price: "$250",
     desc: "Cras dapibus",
-    icon: "src/assets/icons/prizes/icon-medal-3.svg",
+    icon: "/src/assets/icons/prizes/icon-medal-3.svg",
   },
 ];
 

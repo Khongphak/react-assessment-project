@@ -1,7 +1,7 @@
 @import "../../styles/breakpoints.css";
 
 .leaderBoardContainer {
-  background-color: #f4f4f4;
+  background-color: var(--bg-secondary);
   padding: var(--space-5) var(--space-5);
 }
 
@@ -16,7 +16,7 @@
   font-weight: 400;
   font-size: var(--font-size-8);
   line-height: var(--font-size-8);
-  letter-spacing: 0%;
+  letter-spacing: normal;
   text-align: center;
   text-transform: uppercase;
 }
@@ -47,9 +47,9 @@
   text-align: left;
   font-weight: 600;
   font-size: 0.875rem;
-  color: #cd0511;
+  color: var(--color-brand-red);
 
-  border-bottom: 1px solid #dedede;
+  border-bottom: 1px solid var(--border);
   white-space: nowrap;
   user-select: none;
 }
@@ -63,19 +63,19 @@
 }
 
 .tr:hover .td {
-  color: #fff;
+  color: var(--text-color-1);
 }
 
 .td {
   text-align: left;
   padding: var(--space-3) var(--space-5);
   color: var(--text-h);
-  border-bottom: 1px solid #dedede;
+  border-bottom: 1px solid var(--border);
 }
 
 .td:last-child {
   font-weight: 600;
-  color: #161616;
+  color: var(--bg-color-1);
 }
 
 .tableDesc {
@@ -102,7 +102,7 @@
   height: 13.125rem;
   border-radius: 1.5rem;
   padding: 1rem 3rem;
-  background-color: #fff;
+  background-color: var(--bg);
 }
 
 .imageTrophy {
@@ -116,10 +116,9 @@
   flex-direction: column;
   text-transform: uppercase;
   font-weight: 700;
-  font-style: Bold;
   font-size: var(--font-size-1);
   line-height: 100%;
-  letter-spacing: 0%;
+  letter-spacing: normal;
 }
 
 .cardContainer span:nth-child(1) {
@@ -131,25 +130,25 @@
 
 .cardContainer span:nth-child(2) {
   margin-top: 1.5rem;
-  color: #000;
+  color: var(--text-h);
 
   font-weight: 400;
 }
 
 .cardContainer span:nth-child(3) {
   margin-top: 0.5rem;
-  color: #a8a8a8;
+  color: var(--text-muted);
   font-weight: 400;
 }
 
 .cardContainer span:nth-child(4) {
   margin-top: 1.5rem;
-  color: red;
+  color: var(--error-color);
 }
 
 .cardContainer span.totalStyle {
-  color: #000;
-  -webkit-text-fill-color: #000;
+  color: var(--text-h);
+  -webkit-text-fill-color: var(--text-h);
   background: none;
   -webkit-background-clip: unset;
   background-clip: unset;
@@ -166,7 +165,7 @@
   width: 13rem;
   padding: 0.75rem 0;
   background: linear-gradient(90deg, #fcd678 0%, #bc8c2f 100%);
-  color: #fff;
+  color: var(--text-color-1);
   font-size: var(--font-size-2);
   font-weight: 700;
   text-align: center;

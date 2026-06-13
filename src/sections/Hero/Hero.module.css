@@ -24,7 +24,7 @@
   font-size: 4.375rem;
 
   line-height: 4.375rem;
-  letter-spacing: 0%;
+  letter-spacing: normal;
   text-align: center;
   text-transform: uppercase;
   background: linear-gradient(90deg, #fcd678 0%, #fcd678 0.01%, #bc8c2f 100%);
@@ -42,7 +42,7 @@
   font-size: 4.375rem;
 
   line-height: 4.375rem;
-  letter-spacing: 0%;
+  letter-spacing: normal;
   text-align: center;
   text-transform: uppercase;
   background: var(--text-color-1);
@@ -73,7 +73,7 @@
   font-style: Bold;
   font-size: 1.5rem;
   line-height: 100%;
-  letter-spacing: 0%;
+  letter-spacing: normal;
   color: #000;
   margin-bottom: 2rem;
 }

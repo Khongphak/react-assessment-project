@@ -8,7 +8,7 @@ export default function Footer() {
           <div>
             <p className={styles.title}>Find us on</p>
             <img
-              src="src\assets\images\footer\image-social-apps.png"
+              src="/src/assets/images/footer/image-social-apps.png"
               alt="social-apps"
               className={styles.socialApps}
             />
@@ -18,11 +18,11 @@ export default function Footer() {
             <p className={styles.title}>Download HFM App</p>
             <div className={styles.appsImageContainer}>
               <img
-                src="src\assets\images\footer\image-apple-store.png"
+                src="/src/assets/images/footer/image-apple-store.png"
                 alt="social-apps"
               />
               <img
-                src="src\assets\images\footer\image-google-play.png"
+                src="/src/assets/images/footer/image-google-play.png"
                 alt="social-apps"
               />
             </div>

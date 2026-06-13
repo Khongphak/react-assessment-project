@@ -25,7 +25,7 @@ export const mockLeaderboardData: LeaderboardEntry[] = [
   { name: "Jane Lee", gain: 16.01 },
   { name: "Bill Tray", gain: 23.08 },
   { name: "Alex Fanning", gain: 14.21 },
-  { name: "Alex Fanning", gain: 5.21 },
+  { name: "Andrew Porter", gain: 5.21 },
 
 ];
 
