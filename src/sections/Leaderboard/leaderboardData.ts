@@ -1,3 +1,7 @@
+import iconTrophy1 from "../../assets/icons/leaderboard/icon-trophy-1.svg";
+import iconTrophy2 from "../../assets/icons/leaderboard/icon-trophy-2.svg";
+import iconTrophy3 from "../../assets/icons/leaderboard/icon-trophy-3.svg";
+
 export type LeaderboardEntry = {
   name: string;
   gain: number;
@@ -31,9 +35,9 @@ export const mockLeaderboardData: LeaderboardEntry[] = [
 
 
 const rankMeta = [
-  { icon: 'src/assets/icons/leaderboard/icon-trophy-1.svg', reward: 1000 },
-  { icon: 'src/assets/icons/leaderboard/icon-trophy-2.svg', reward: 500 },
-  { icon: 'src/assets/icons/leaderboard/icon-trophy-3.svg', reward: 250 },
+  { icon: iconTrophy1, reward: 1000 },
+  { icon: iconTrophy2, reward: 500  },
+  { icon: iconTrophy3, reward: 250  },
 ];
 
 export const mockTopPerformers: ITopThree[] = [...mockLeaderboardData]

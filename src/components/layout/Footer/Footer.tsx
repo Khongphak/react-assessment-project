@@ -1,4 +1,7 @@
 import styles from "./Footer.module.css";
+import imageSocialApps from "../../../assets/images/footer/image-social-apps.png";
+import imageAppleStore from "../../../assets/images/footer/image-apple-store.png";
+import imageGooglePlay from "../../../assets/images/footer/image-google-play.png";
 
 export default function Footer() {
   return (
@@ -8,7 +11,7 @@ export default function Footer() {
           <div>
             <p className={styles.title}>Find us on</p>
             <img
-              src="/src/assets/images/footer/image-social-apps.png"
+              src={imageSocialApps}
               alt="social-apps"
               className={styles.socialApps}
             />
@@ -18,11 +21,11 @@ export default function Footer() {
             <p className={styles.title}>Download HFM App</p>
             <div className={styles.appsImageContainer}>
               <img
-                src="/src/assets/images/footer/image-apple-store.png"
+                src={imageAppleStore}
                 alt="social-apps"
               />
               <img
-                src="/src/assets/images/footer/image-google-play.png"
+                src={imageGooglePlay}
                 alt="social-apps"
               />
             </div>

@@ -1,6 +1,9 @@
 import { useState } from "react";
 import Button from "../../ui/Button";
 import styles from "./Topbar.module.css";
+import iconLogo from "../../../assets/icons/topbar/icon-logo-hfm.svg";
+import iconMobilePhone from "../../../assets/icons/topbar/icon-mobile-phone.svg";
+import iconFlagEn from "../../../assets/icons/topbar/icon-flag-en.svg";
 
 export default function Topbar() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -11,7 +14,7 @@ export default function Topbar() {
         <a href="/" className={styles.topbarBrand}>
           <p className={styles.logoMessage}>Member of HF Markets Group</p>
           <img
-            src="/src/assets/icons/topbar/icon-logo-hfm.svg"
+            src={iconLogo}
             alt="HF Markets Logo"
             className={styles.topbarLogo}
           />
@@ -20,7 +23,7 @@ export default function Topbar() {
           <div className={styles.topbarInfoLinks}>
             <div className={styles.downloadApp}>
               <img
-                src="/src/assets/icons/topbar/icon-mobile-phone.svg"
+                src={iconMobilePhone}
                 alt="Mobile Phone Icon"
                 className={styles.mobileIcon}
               />
@@ -32,7 +35,7 @@ export default function Topbar() {
             <a href="/PartnerWithUs">Partner with us</a>
             <div className={styles.divider} />
             <img
-              src="/src/assets/icons/topbar/icon-flag-en.svg"
+              src={iconFlagEn}
               alt="EN FlagIcon"
               className={styles.flagIcon}
             />

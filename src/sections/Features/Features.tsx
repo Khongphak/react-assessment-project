@@ -1,4 +1,8 @@
 import styles from "./Features.module.css";
+import iconAccount from "../../assets/icons/features/icon-account.svg";
+import iconCash from "../../assets/icons/features/icon-cash.svg";
+import iconCandleStick from "../../assets/icons/features/icon-candle-stick.svg";
+import imageMobilePhones from "../../assets/images/features/image-mobile-phones.png";
 
 export default function Features() {
   return (
@@ -8,7 +12,7 @@ export default function Features() {
         <div className={styles.boxContainer}>
           <div>
             <img
-              src="/src/assets/icons/features/icon-account.svg"
+              src={iconAccount}
               alt="icon-account"
               className={styles.featureIcon}
             />
@@ -16,7 +20,7 @@ export default function Features() {
           </div>
           <div>
             <img
-              src="/src/assets/icons/features/icon-cash.svg"
+              src={iconCash}
               alt="icon-cash"
               className={styles.featureIcon}
             />
@@ -24,7 +28,7 @@ export default function Features() {
           </div>
         </div>
         <img
-          src="/src/assets/images/features/image-mobile-phones.png"
+          src={imageMobilePhones}
           alt="image-mobile-phones"
           className={styles.mobilePhoneImageStyle}
         />
@@ -32,7 +36,7 @@ export default function Features() {
         <div className={`${styles.boxContainer} ${styles.boxContainerRight}`}>
           <div>
             <img
-              src="/src/assets/icons/features/icon-candle-stick.svg"
+              src={iconCandleStick}
               alt="icon-candle-stick"
               className={styles.featureIcon}
             />
@@ -40,7 +44,7 @@ export default function Features() {
           </div>
           <div>
             <img
-              src="/src/assets/icons/features/icon-account.svg"
+              src={iconAccount}
               alt="icon-account"
               className={styles.featureIcon}
             />
