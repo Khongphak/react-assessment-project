@@ -1,8 +1,9 @@
 .footer {
-  border-top: 1px solid var(--border);
   background: var(--bg);
   padding: var(--space-5);
   margin-top: auto;
+  background-color: #161616;
+  height: 20.625rem;
 }
 
 .inner {
