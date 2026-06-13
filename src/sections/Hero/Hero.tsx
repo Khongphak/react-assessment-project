@@ -9,7 +9,7 @@ import styles from "./Hero.module.css";
 const schema = z.object({
   firstName: z.string().min(2, "First name must be at least 2 characters"),
   lastName: z.string().min(2, "Last name must be at least 2 characters"),
-  country: z.string().min(2, "Country must be at least 2 characters"),
+  country: z.string().min(1, "Please select a country"),
   code: z.string().min(5, "Postal code must be at least 5 characters"),
   phone: z.string().min(10, "Phone number must be at least 10 digits"),
   email: z.string().email("Please enter a valid email"),
@@ -41,6 +41,7 @@ export default function Hero() {
       <h1 className={styles.headline2}>sit amet tosik</h1>
 
       <div className={styles.formContainer}>
+        <p className={styles.formTitle}>Lorem ipsum dolor sit amet</p>
         <form
           onSubmit={handleSubmit(onSubmit)}
           className={styles.form}
@@ -66,9 +67,21 @@ export default function Hero() {
             <Field
               id="country"
               label="Country"
-              type="text"
-              placeholder="Country"
+              type="select"
               error={errors.country?.message}
+              options={[
+                { label: "Select country", value: "" },
+                { label: "Thailand", value: "TH" },
+                { label: "United States", value: "US" },
+                { label: "United Kingdom", value: "GB" },
+                { label: "Japan", value: "JP" },
+                { label: "Singapore", value: "SG" },
+                { label: "Australia", value: "AU" },
+                { label: "Germany", value: "DE" },
+                { label: "France", value: "FR" },
+                { label: "Canada", value: "CA" },
+                { label: "India", value: "IN" },
+              ]}
               {...register("country")}
             />
             <div className={styles.codePhone}>
@@ -100,7 +113,7 @@ export default function Hero() {
             <Field
               id="experience"
               label="Experience"
-              type="select"
+              type="text"
               placeholder="Experience"
               error={errors.experience?.message}
               {...register("experience")}
@@ -115,9 +128,13 @@ export default function Hero() {
                 {...register("privacyPolicy")}
               />
               I have read and accepted the{" "}
-              <span className={styles.checkboxLabelHighlight}>Privacy Policy</span>
-              {" "}and{" "}
-              <span className={styles.checkboxLabelHighlight}>Terms and Conditions</span>
+              <span className={styles.checkboxLabelHighlight}>
+                Privacy Policy
+              </span>{" "}
+              and{" "}
+              <span className={styles.checkboxLabelHighlight}>
+                Terms and Conditions
+              </span>
             </label>
             {errors.privacyPolicy && (
               <span className={styles.checkboxError}>
