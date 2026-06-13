@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 2rem 0rem 2rem;
+  padding: 2rem 1.5rem 0rem 1.5rem;
   background-color: #f4f4f4;
 }
 
@@ -18,7 +18,7 @@
 .featuresContent {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  /* align-items: center; */
   justify-content: space-between;
 }
 
@@ -27,22 +27,33 @@
   display: flex;
   flex-direction: column;
   gap: 4.75rem;
-  text-align: left;
+  text-align: right;
   margin-bottom: 3.75rem;
+}
+
+.boxContainerRight {
+  text-align: left;
 }
 
 .mobilePhoneImageStyle {
   margin: 2rem 1.25rem 0rem 1.25rem;
   max-width: 35.25rem;
+  align-self: flex-end;
 }
 
 @media (max-width: 768px) {
   .boxContainer {
-    gap: 2rem;
+    gap: 1.5rem;
+    margin-bottom: 1.75rem;
   }
-  .featureContainer {
+  .featuresContainer {
     font-size: 0.5rem;
+    padding: 0rem 1rem;
   }
+  .mobilePhoneImageStyle {
+    margin: 0.5rem 0.75rem 0rem 0.75rem;
+  }
+
   .featureIcon {
     width: 50%;
   }

@@ -29,7 +29,7 @@ export default function Features() {
           className={styles.mobilePhoneImageStyle}
         />
         <div className={styles.featuresContent}>
-          <div className={styles.boxContainer}>
+          <div className={`${styles.boxContainer} ${styles.boxContainerRight}`}>
             <div className={styles.featureContainer}>
               <img
                 src="/src/assets/icons/features/icon-candle-stick.svg"
