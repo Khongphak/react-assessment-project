@@ -74,14 +74,14 @@ export default function Leaderboard() {
             <div className={styles.cardItemContainer} key={item.name}>
               <img src={item.icon} alt={item.name} className={styles.imageTrophy} />
               <div className={styles.cardItemDetail}>
-                <span>
+                <span className={styles.rankTitle}>
                   {item.titlePrefix} {idx + 1}
                   <sup className={styles.ordinalStyle}>{ordinal(idx + 1)}</sup>{" "}
                   {item.titleSuffix}
                 </span>
-                <span>{item.name}</span>
-                <span>{item.id}</span>
-                <span>
+                <span className={styles.playerName}>{item.name}</span>
+                <span className={styles.playerId}>{item.id}</span>
+                <span className={styles.playerGain}>
                   <span className={styles.totalStyle}>Total Gain Of</span>{" "}
                   {item.totalGainPercent}%
                 </span>
