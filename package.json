@@ -5,6 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:server": "tsx watch server/index.ts",
+    "dev:full": "concurrently \"npm run dev\" \"npm run dev:server\"",
+    "db:list": "tsx server/scripts/db-list.ts",
+    "db:delete": "tsx server/scripts/db-delete.ts",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
