@@ -1,4 +1,3 @@
-import { useState } from "react";
 import JoinNowButton from "../../components/ui/JoinNowButton";
 import styles from "./Prize.module.css";
 import iconMedal1 from "../../assets/icons/prizes/icon-medal-1.svg";
@@ -7,16 +6,13 @@ import iconMedal3 from "../../assets/icons/prizes/icon-medal-3.svg";
 
 const items = [
   { price: "$1000", desc: "Cras dapibus & Cras dapibus", icon: iconMedal1 },
-  { price: "$500",  desc: "Cras dapibus",                icon: iconMedal2 },
-  { price: "$250",  desc: "Cras dapibus",                icon: iconMedal3 },
+  { price: "$500", desc: "Cras dapibus", icon: iconMedal2 },
+  { price: "$250", desc: "Cras dapibus", icon: iconMedal3 },
 ];
 
 export default function Prize() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
   const handleClick = () => {
-    setIsSubmitting(true);
-    setTimeout(() => setIsSubmitting(false), 2000);
+    document.getElementById("register")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -38,7 +34,7 @@ export default function Prize() {
       <JoinNowButton
         className={styles.joinButton}
         isShowTerm={true}
-        isSubmitting={isSubmitting}
+        isSubmitting={false}
         onClick={handleClick}
         type="button"
       />
