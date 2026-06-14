@@ -5,7 +5,7 @@
   text-align: center;
   background-image: url("../../assets/images/hero/image-hero.png");
   width: 100vw;
-  margin-left: calc(50% - 51vw);
+  margin-left: calc(50% - 50vw);
   aspect-ratio: 19 / 7;
   background-size: cover;
   background-repeat: no-repeat;
@@ -171,7 +171,7 @@
 
 .submitButton {
   width: 19rem;
-  height: 3.3.375rem;
+  height: 3.375rem;
   padding: 1rem;
 }
 

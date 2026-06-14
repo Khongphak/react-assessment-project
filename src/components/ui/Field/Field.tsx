@@ -6,7 +6,6 @@ import {
 import styles from "./Field.module.css";
 
 type BaseProps = {
-  label: string;
   error?: string;
   id?: string;
 };
