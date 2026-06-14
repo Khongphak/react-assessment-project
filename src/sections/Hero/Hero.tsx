@@ -35,7 +35,7 @@ export default function Hero() {
   };
 
   return (
-    <section className={styles.section}>
+    <section id="register" className={styles.section}>
       <h1 className={styles.headerTitle1}>Lorem ipsum dolor</h1>
       <h1 className={styles.headerTitle2}>sit amet tosik</h1>
 
