@@ -1,4 +1,6 @@
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useMutation } from "@tanstack/react-query";
+import axios, { isAxiosError } from "axios";
 import { useEffect, useState } from "react";
 import { useForm, useWatch } from "react-hook-form";
 import { z } from "zod";
@@ -58,13 +60,18 @@ const COUNTRY_CODES: Record<string, string> = {
   CY: "+357",
 };
 
+async function registerUser(data: FormValues): Promise<{ success: boolean; message: string }> {
+  const response = await axios.post<{ success: boolean; message: string }>("/api/register", data);
+  return response.data;
+}
+
 export default function Hero() {
   const {
     register,
     handleSubmit,
     control,
     setValue,
-    formState: { errors, isSubmitting },
+    formState: { errors },
   } = useForm<FormValues>({
     resolver: zodResolver(schema),
   });
@@ -73,6 +80,19 @@ export default function Hero() {
     type: "success" | "error";
     message: string;
   } | null>(null);
+
+  const mutation = useMutation({
+    mutationFn: registerUser,
+    onSuccess: (result) => {
+      setNotification({ type: "success", message: result.message });
+    },
+    onError: (error) => {
+      const message = isAxiosError(error)
+        ? (error.response?.data as { message?: string })?.message ?? "Something went wrong. Please try again."
+        : "Could not reach the server. Please try again.";
+      setNotification({ type: "error", message });
+    },
+  });
 
   const selectedCountry = useWatch({ control, name: "country" });
 
@@ -90,14 +110,8 @@ export default function Hero() {
     return () => clearTimeout(timer);
   }, [notification]);
 
-  const onSubmit = async (_data: FormValues) => {
-    try {
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-      console.log("Form submitted with data:", _data);
-      setNotification({ type: "success", message: "Form submitted successfully!" });
-    } catch {
-      setNotification({ type: "error", message: "Something went wrong. Please try again." });
-    }
+  const onSubmit = (data: FormValues) => {
+    mutation.mutate(data);
   };
 
   return (
@@ -115,7 +129,6 @@ export default function Hero() {
           <div className={styles.fieldsGrid}>
             <Field
               id="firstName"
-              label="First Name"
               type="text"
               placeholder="First name"
               error={errors.firstName?.message}
@@ -123,7 +136,6 @@ export default function Hero() {
             />
             <Field
               id="lastName"
-              label="Last Name"
               type="text"
               placeholder="Last name"
               error={errors.lastName?.message}
@@ -131,7 +143,6 @@ export default function Hero() {
             />
             <Field
               id="country"
-              label="Country"
               type="select"
               error={errors.country?.message}
               options={[
@@ -153,7 +164,6 @@ export default function Hero() {
             <div className={styles.codePhone}>
               <Field
                 id="code"
-                label="Code"
                 type="text"
                 placeholder="Code"
                 error={errors.code?.message}
@@ -161,7 +171,6 @@ export default function Hero() {
               />
               <Field
                 id="phone"
-                label="Phone Number"
                 type="text"
                 placeholder="Phone number"
                 error={errors.phone?.message}
@@ -170,7 +179,6 @@ export default function Hero() {
             </div>
             <Field
               id="email"
-              label="Email"
               type="email"
               placeholder="Email"
               error={errors.email?.message}
@@ -178,7 +186,6 @@ export default function Hero() {
             />
             <Field
               id="experience"
-              label="Experience"
               type="number"
               placeholder="Experience"
               error={errors.experience?.message}
@@ -209,7 +216,7 @@ export default function Hero() {
           <div className={styles.submitButtonContainer}>
             <JoinNowButton
               className={styles.submitButton}
-              isSubmitting={isSubmitting}
+              isSubmitting={mutation.isPending}
             ></JoinNowButton>
           </div>
           {errors.privacyPolicy && (
