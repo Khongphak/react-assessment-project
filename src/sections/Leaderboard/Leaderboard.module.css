@@ -40,6 +40,7 @@
 
 .th:last-child {
   width: 33.33%;
+  text-align: left;
 }
 
 .th {
@@ -49,13 +50,9 @@
   font-size: 0.875rem;
   color: var(--color-brand-red);
 
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--border-table);
   white-space: nowrap;
   user-select: none;
-}
-
-.th:last-child {
-  text-align: left;
 }
 
 .tr:hover {
@@ -70,7 +67,7 @@
   text-align: left;
   padding: var(--space-3) var(--space-5);
   color: var(--text-h);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--border-table);
 }
 
 .td:last-child {
@@ -95,7 +92,6 @@
   position: relative;
   overflow: hidden;
   display: flex;
-  /* flex-direction: column; */
   align-items: center;
   justify-content: flex-start;
   width: 29.5rem;
@@ -121,32 +117,31 @@
   letter-spacing: normal;
 }
 
-.cardContainer span:nth-child(1) {
+.rankTitle {
   background: linear-gradient(90deg, #fcd678 0%, #fcd678 0.01%, #bc8c2f 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.cardContainer span:nth-child(2) {
+.playerName {
   margin-top: 1.5rem;
   color: var(--text-h);
-
   font-weight: 400;
 }
 
-.cardContainer span:nth-child(3) {
+.playerId {
   margin-top: 0.5rem;
   color: var(--text-muted);
   font-weight: 400;
 }
 
-.cardContainer span:nth-child(4) {
+.playerGain {
   margin-top: 1.5rem;
   color: var(--error-color);
 }
 
-.cardContainer span.totalStyle {
+.totalStyle {
   color: var(--text-h);
   -webkit-text-fill-color: var(--text-h);
   background: none;
@@ -226,11 +221,11 @@
 }
 
 @media (--md) {
-  .cardContainer span:nth-child(2) {
+  .playerName {
     margin-top: 1rem;
   }
 
-  .cardContainer span:nth-child(4) {
+  .playerGain {
     margin-top: 1rem;
   }
 }

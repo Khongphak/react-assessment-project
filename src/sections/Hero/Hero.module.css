@@ -4,8 +4,7 @@
   padding: var(--space-8) 0;
   text-align: center;
   background-image: url("../../assets/images/hero/image-hero.png");
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
+  width: 100%;
   aspect-ratio: 19 / 7;
   background-size: cover;
   background-repeat: no-repeat;
@@ -198,7 +197,6 @@
 @media (--tablet) {
   .section {
     padding: var(--space-4) 0;
-    margin-left: 0rem;
   }
 
   .formContainer {
