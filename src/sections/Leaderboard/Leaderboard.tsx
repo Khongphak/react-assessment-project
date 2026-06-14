@@ -11,7 +11,7 @@ import type { LeaderboardEntry } from "../../api/leaderboard";
 import JoinNowButton from "../../components/ui/JoinNowButton";
 import { type ITopThree, rankMeta } from "./leaderboardMeta";
 import { useLeaderboard } from "./useLeaderboard";
-import styles from "./LeaderboardTable.module.css";
+import styles from "./Leaderboard.module.css"
 
 function ordinal(idx: number): string {
   const rules = new Intl.PluralRules("en", { type: "ordinal" });
@@ -37,9 +37,8 @@ const columns = [
   }),
 ];
 
-export default function LeaderboardTable() {
+export default function Leaderboard() {
   const [sorting, setSorting] = useState<SortingState>([]);
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const { data = [], isLoading, isError } = useLeaderboard();
 
   const topPerformers: ITopThree[] = data.slice(0, 3).map((entry, i) => ({
@@ -52,8 +51,7 @@ export default function LeaderboardTable() {
   }));
 
   const handleClick = () => {
-    setIsSubmitting(true);
-    setTimeout(() => setIsSubmitting(false), 2000);
+    document.getElementById("register")?.scrollIntoView({ behavior: "smooth" });
   };
 
   const table = useReactTable({
@@ -134,7 +132,7 @@ export default function LeaderboardTable() {
       <JoinNowButton
         className={styles.joinButton}
         isShowTerm={true}
-        isSubmitting={isSubmitting}
+        isSubmitting={false}
         onClick={handleClick}
         type="button"
       />

@@ -5,7 +5,7 @@ import Prize from "./sections/Prize";
 import FAQ from "./sections/FAQ";
 import Features from "./sections/Features";
 import Hero from "./sections/Hero";
-import LeaderboardTable from "./sections/Leaderboard";
+import Leaderboard from "./sections/Leaderboard";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Hero />
         <Features />
         <Prize />
-        <LeaderboardTable />
+        <Leaderboard />
         <FAQ />
       </main>
       <Footer />
